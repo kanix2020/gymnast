@@ -1,0 +1,160 @@
+
+.wrapper {
+  display: flex;
+  width:100%;
+}
+.side-bar {
+  background-color: #253141;
+  width: 240px;
+  height: 100vh;
+}
+
+.side-bar-header {
+  height: 100px;
+  padding: 0 20px;
+  background-color: #2F3E51;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score-nd{
+  background-color: rgb(247, 247, 247) !important;
+}
+
+.header-name{
+margin:auto
+}
+.header-name a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.create-room a {
+  font-size: 10px;
+  border: 1px solid lightblue;
+  padding: 14px;
+  color: deepskyblue;
+  text-decoration: none;
+}
+
+.games-top{
+  height:100px;
+  width:100%;
+  padding:30px;
+  background-color: #343a40;
+}
+
+.games-top p{
+  text-align: center;
+  font-size: 4vh;
+  color:white;
+}
+
+.games::-webkit-scrollbar {
+  display: none;
+}
+
+.games {
+  /* height: calc(100vh - 100px); */
+  overflow: scroll;
+}
+
+.game-name a {
+  text-decoration: none;
+  color: white;
+}
+
+.chat {
+  background-color: #FFFFFF;
+  width: calc(100vw - 300px);
+}
+
+.chat-header {
+  background-color: whitesmoke;
+  height: 100px;
+  width:100%;
+  padding: 0 40px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.header-title {
+  color: #333;
+  font-size: 24px;
+  margin-top: 36px;
+}
+
+.header-button {
+  margin-top: 40px;
+}
+
+.header-button a {
+  text-decoration: none;
+  border: 1px solid darkred;
+  color: darkred;
+  padding: 20px;
+}
+
+.messages {
+  background-color: #FAFAFA;
+  height: calc(100vh - 100px - 90px);
+  padding: 46px 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form {
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;
+}
+
+.chat .table th {
+padding: 0.35rem !important;
+text-align: center !important;
+}
+
+.chat .table td {
+  width: 2px;
+  height: 10%;
+  padding: 0.25rem !important;
+  vertical-align: bottom !important;
+  border-top: 1px solid #dee2e6;
+}
+
+/* .main-table{
+  border-collapse: collapse;
+} */
+/* 
+.table-main{
+  margin: auto;
+  margin-top:50px;
+  width: 20%;
+}
+
+.table-main td{
+  width:100%;
+} */
+
+thead button{
+  font-size:0.5rem;
+}
+
+.event_total{
+  background-color: rgb(238, 232, 232);
+}
+
+ .table td{
+  vertical-align: inherit !important;
+}
+
+.athlete_total{
+  background-color: rgb(253, 194, 154);
+}
+
+.show_nd{
+  background-color: rgb(241, 241, 241);
+}
+

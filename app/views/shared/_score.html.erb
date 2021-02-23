@@ -1,0 +1,69 @@
+<%# <div id="hello2">
+      <p>{{ message }}</p>
+    </div> %>
+
+<%= form_with model:@score, url: scores_path, local: true do |f| %>
+  <div class="d-flex my-4">
+    <div class="ml-4">
+      <%= f.collection_select(:game_id, Game.all, :id, :name, {}, {class:"form-select"}) %>
+    </div>
+    <div class="ml-4">
+      <%= f.collection_select(:athlete_id, Athlete.all, :id, :name, {}, {class:"form-select"}) %>
+    </div>
+  </div>
+  
+     <%# <button type="button" id="scorebtn" class="btn btn-primary w-10 mt-2 justify-contents-right">計算</button> %>
+  <table class="table table-bordered m-4">
+    <thead>
+      <tr>
+        <th scope="col" colspan="2">FX</th>
+        <th scope="col" colspan="2">PH</th>
+        <th scope="col" colspan="2">Ri</th>
+        <th scope="col" colspan="2">Vo</th>
+        <th scope="col" colspan="2">PB</th>
+        <th scope="col" colspan="2">HB</th>
+      </tr>
+    </thead>
+      <%# <% @athlete.each do |athlete| %>
+      <tbody>
+        <tr>
+          <td><%= f.text_field :floor_d, class:"form-control", id:"fx_d", placeholder:"D" %></td>
+          <td rowspan="3" id="fx_total">Total</td>
+          <td><%= f.text_field :pommel_d, class:"form-control", id:"ph_d", placeholder:"D" %></td>
+          <td rowspan="3" id="ph_total">Total</td>
+          <td><%= f.text_field :rings_d, class:"form-control", id:"ri_d", placeholder:"D" %></td>
+          <td rowspan="3" id="ri_total">Total</td>
+          <td><%= f.text_field :vault_d, class:"form-control", id:"vo_d", placeholder:"D" %></td>
+          <td rowspan="3" id="vo_total">Total</td>
+          <td><%= f.text_field :parallel_d, class:"form-control", id:"pb_d", placeholder:"D" %></td>
+          <td rowspan="3" id="pb_total">Total</td>
+          <td><%= f.text_field :horizontal_d, class:"form-control", id:"hb_d", placeholder:"D" %></td>
+          <td rowspan="3" id="hb_total">Total</td>
+        </tr>
+        <tr>
+          <td><%= f.text_field :floor_e, class:"form-control", id:"fx_e", placeholder:"E" %></td>
+          <td><%= f.text_field :pommel_e, class:"form-control", id:"ph_e", placeholder:"E" %></td>
+          <td><%= f.text_field :rings_e, class:"form-control", id:"ri_e", placeholder:"E" %></td>
+          <td><%= f.text_field :vault_e, class:"form-control", id:"vo_e", placeholder:"E" %></td>
+          <td><%= f.text_field :parallel_e, class:"form-control", id:"pb_e", placeholder:"E" %></td>
+          <td><%= f.text_field :horizontal_e, class:"form-control", id:"hb_e", placeholder:"E" %></td>
+        </tr>
+        <tr>
+          <td><%= f.text_field :floor_nd, class:"form-control score-nd", id:"fx_nd", placeholder:"ND" %></td>
+          <td><%= f.text_field :pommel_nd, class:"form-control score-nd", id:"ph_nd", placeholder:"ND" %></td>
+          <td><%= f.text_field :rings_nd, class:"form-control score-nd", id:"ri_nd", placeholder:"ND" %></td>
+          <td><%= f.text_field :vault_nd, class:"form-control score-nd", id:"vo_nd", placeholder:"ND" %></td>
+          <td><%= f.text_field :parallel_nd, class:"form-control score-nd", id:"pb_nd", placeholder:"ND" %></td>
+          <td><%= f.text_field :horizontal_nd, class:"form-control score-nd", id:"hb_nd", placeholder:"ND" %></td>
+        </tr>
+      </tbody>
+      <%# <% end %> 
+    <div class="col-2 m-2">
+      <%= f.submit "スコア取り込み" ,class:"btn btn-outline-primary btn-block" %>
+    </div>
+  </table>
+<% end %>  
+
+
+
+

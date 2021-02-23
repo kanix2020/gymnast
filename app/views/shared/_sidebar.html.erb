@@ -1,0 +1,32 @@
+<%# <ハンバーガー> %>
+<%# <nav id="nav"> %>
+<%# </nav>
+  <ul>
+    <li><a href="#">SUMPLE1</a></li>
+    <li><a href="#">SUMPLE2</a></li>
+    <li><a href="#">SUMPLE3</a></li>
+  </ul> %>
+
+<%# <div id="hamburger"> %>
+　<!-- 1番上の線 -->
+  <%# <span class="inner_line" id="line1"></span> %>
+　<!-- 真ん中の線 -->
+  <%# <span class="inner_line" id="line2"></span> %>
+　<!-- 1番下の線 -->
+  <%# <span class="inner_line" id="line3"></span> %>
+<%# </div> %>
+<%# ハンバーガー %>
+
+<div class="games-top">
+   <p>大会結果</p>
+</div>
+  <div class="games">
+    <div class="game p-3">
+      <div class="game-name">
+      <% @games.each do |game| %>
+        <%=link_to game.name, score_path(game), class:"btn btn-outline-primary btn-block" %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+  

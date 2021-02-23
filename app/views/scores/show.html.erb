@@ -1,0 +1,68 @@
+<div class="m-5 bg-primary">
+  <div class="p-3 m-5 bg-dark text-white">
+    <% @scores.each do |score| %>
+      <h1><%= score.game.name %></h1>
+      <% break %>
+    <% end %>
+  </div>
+</div>
+
+<div class="col-2 m-5">
+  <%=link_to 'もどる', root_path, class:"btn btn-outline-primary btn-block" %>
+</div>
+
+<div class="d-flex justify-content-center">
+<div>
+  <table class="table table-bordered">
+      <thead class="thead-light text-center">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col" colspan="2">FX</th>
+          <th scope="col" colspan="2">PH</th>
+          <th scope="col" colspan="2">Ri</th>
+          <th scope="col" colspan="2">Vo</th>
+          <th scope="col" colspan="2">PB</th>
+          <th scope="col" colspan="2">HB</th>
+          <th scope="col" colspan="2">合計</th>
+        <tr>
+      </thead>
+      <tbody>
+      
+    <% @scores.each do |score| %>
+       <tr>
+          <td rowspan="3" id="fx_total" class="show_athelte_name"><%= score.athlete.name %></td>
+          <td><%= "D　　#{score.floor_d}" %></td>
+          <td rowspan="3" id="fx_total" class="event_total"><%= "#{(score.floor_d + score.floor_e - score.floor_nd).floor(3)}" %></td>
+          <td><%= "D　　#{score.pommel_d}" %></td>
+          <td rowspan="3" id="ph_total" class="event_total"><%= "#{(score.pommel_d + score.pommel_e - score.pommel_nd).floor(3)}" %></td>
+          <td><%= "D　　#{score.rings_d}" %></td>
+          <td rowspan="3" id="ri_total" class="event_total"><%= "#{(score.rings_d + score.rings_e - score.rings_nd).floor(3)}" %></td>
+          <td><%= "D　　#{score.vault_d}" %></td>
+          <td rowspan="3" id="vo_total" class="event_total"><%= "#{(score.vault_d + score.vault_e - score.vault_nd).floor(3)}" %></td>
+          <td><%= "D　　#{score.parallel_d}" %></td>
+          <td rowspan="3" id="pb_total" class="event_total"><%= "#{(score.parallel_d + score.parallel_e - score.parallel_nd).floor(3)}" %></td>
+          <td><%= "D　　#{score.horizontal_d}" %></td>
+          <td rowspan="3" id="hb_total" class="event_total"><%= "#{(score.horizontal_d + score.horizontal_e - score.horizontal_nd).floor(3)}" %></td>
+          <td rowspan="3" id="athlete_total" class="athlete_total"><%= ((score.floor_d + score.pommel_d + score.rings_d + score.vault_d + score.parallel_d + score.horizontal_d) + (score.floor_e + score.pommel_e + score.rings_e + score.vault_e + score.parallel_e + score.horizontal_e) - (score.floor_nd + score.pommel_nd + score.rings_nd + score.vault_nd + score.parallel_nd + score.horizontal_nd)).floor(3) %></td>
+        </tr>
+        <tr>
+          <td><%= "E　　#{score.floor_e}" %></td>
+          <td><%= "E　　#{score.pommel_e}" %></td>
+          <td><%= "E　　#{score.rings_e}" %></td>
+          <td><%= "E　　#{score.vault_e}" %></td>
+          <td><%= "E　　#{score.parallel_e}" %></td>
+          <td><%= "E　　#{score.horizontal_e}" %></td>
+        </tr>
+        <tr>
+          <td class="show_nd"><%= "ND　 #{score.floor_nd}" %></td>
+          <td class="show_nd"><%= "ND　 #{score.pommel_nd}" %></td>
+          <td class="show_nd"><%= "ND　 #{score.rings_nd}" %></td>
+          <td class="show_nd"><%= "ND　 #{score.vault_nd}" %></td>
+          <td class="show_nd"><%= "ND　 #{score.parallel_nd}" %></td>
+          <td class="show_nd"><%= "ND　 #{score.horizontal_nd}" %></td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+</div>
+</div>
