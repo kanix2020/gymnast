@@ -44,12 +44,12 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+# production:
+#   url: <%= ENV['DATABASE_URL'] %>
 #
 production:
   <<: *default
   database: gymnast_production
-    username: root
+  username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
