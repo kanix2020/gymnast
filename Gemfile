@@ -58,3 +58,6 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'active_hash'
 gem 'foreman'
+group :production do
+  gem 'unicorn', '5.4.1'
+end
