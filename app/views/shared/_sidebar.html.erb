@@ -26,7 +26,8 @@
         <%# <% @games.each do |game| %> 
         <% @games.zip(@scores) do |game,score| %>
           <% unless score == nil %>
-            <%=link_to game.name, score_path(game), class:"btn btn-outline-primary btn-block" %>
+            <%=link_to game.name, score_path(game), class:"btn btn-primary btn-block mb-1" %>
+            <%= link_to "CSV出力", score_path(game, format: :csv), class: "btn btn-outline-info mb-2" %>
           <% end %>
         <% end %>
       </div>
