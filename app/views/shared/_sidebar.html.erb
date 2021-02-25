@@ -23,9 +23,12 @@
   <div class="games">
     <div class="game p-3">
       <div class="game-name">
-      <% @games.each do |game| %>
-        <%=link_to game.name, score_path(game), class:"btn btn-outline-primary btn-block" %>
-      <% end %>
+        <%# <% @games.each do |game| %> 
+        <% @games.zip(@scores) do |game,score| %>
+          <% unless score == nil %>
+            <%=link_to game.name, score_path(game), class:"btn btn-outline-primary btn-block" %>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>

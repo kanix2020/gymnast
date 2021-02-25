@@ -7,5 +7,8 @@ class CreateAthletes < ActiveRecord::Migration[6.0]
       t.integer    :affiliation_id,    null: false
       t.timestamps
     end
+
+    add_index :athletes, :name,        unique: true
+  
   end
 end

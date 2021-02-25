@@ -2,6 +2,7 @@ class ScoresController < ApplicationController
   def index
     @games = Game.all 
     @scores = Score.all
+    @athletes = Athlete.all
   end
   
   def new
@@ -9,6 +10,7 @@ class ScoresController < ApplicationController
   end
   
   def create
+    @athletes = Athlete.all
     @games = Game.all
     @scores = Score.all
     @score = Score.new(score_params)

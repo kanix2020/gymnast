@@ -16,6 +16,7 @@
   <table class="table table-bordered">
       <thead class="thead-light text-center">
         <tr>
+          <th scope="col">所属</th>
           <th scope="col">Name</th>
           <th scope="col" colspan="2">FX</th>
           <th scope="col" colspan="2">PH</th>
@@ -30,6 +31,7 @@
       
     <% @scores.each do |score| %>
        <tr>
+          <td rowspan="3" id="fx_total" class="show_athelte_name"><%= score.athlete.affiliation.name %></td>
           <td rowspan="3" id="fx_total" class="show_athelte_name"><%= score.athlete.name %></td>
           <td><%= "D　　#{score.floor_d}" %></td>
           <td rowspan="3" id="fx_total" class="event_total"><%= "#{(score.floor_d + score.floor_e - score.floor_nd).floor(3)}" %></td>

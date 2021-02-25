@@ -7,5 +7,8 @@ class CreateGames < ActiveRecord::Migration[6.0]
       t.integer    :prefecture_id,    null: false
       t.timestamps
     end
+
+    add_index :games, :event_day,          unique: true
+
   end
 end

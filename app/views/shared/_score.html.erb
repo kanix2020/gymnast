@@ -2,14 +2,26 @@
       <p>{{ message }}</p>
     </div> %>
 
-<%= form_with model:@score, url: scores_path, local: true do |f| %>
-  <div class="d-flex my-4">
-    <div class="ml-4">
-      <%= f.collection_select(:game_id, Game.all, :id, :name, {}, {class:"form-select"}) %>
-    </div>
-    <div class="ml-4">
-      <%= f.collection_select(:athlete_id, Athlete.all, :id, :name, {}, {class:"form-select"}) %>
-    </div>
+<%= form_with model: @score, url: scores_path, local: true do |f| %>
+    <%# <div class="justify-content-center">
+      <%# <%= render 'shared/error_messages', model: f.object %>
+    <%# </div> %>
+  <div class="d-flex m-4">
+    <% if @games[0] == nil && @athletes[0] == nil %>
+      <%= link_to "選手データ登録", new_athlete_path %>・
+      <%= link_to "大会データ登録", new_game_path %>を行ってください。
+    <% elsif @games[0] == nil %>
+      <%= link_to "大会データ登録", new_game_path %>を行ってください。
+    <% elsif @athletes[0] == nil %>
+      <%= link_to "選手データ登録", new_athlete_path %>を行って下さい。
+    <% else %>
+      <div class="ml-4">
+        <%= f.collection_select(:game_id, Game.all, :id, :name, {},   {class:"form-select"}) %>
+      </div>
+      <div class="ml-4">
+       <%= f.collection_select(:athlete_id, Athlete.all, :id, :name, {}, {class:"form-select"}) %>
+      </div>
+    <% end %>
   </div>
   
      <%# <button type="button" id="scorebtn" class="btn btn-primary w-10 mt-2 justify-contents-right">計算</button> %>
@@ -57,11 +69,13 @@
           <td><%= f.text_field :horizontal_nd, class:"form-control score-nd", id:"hb_nd", placeholder:"ND" %></td>
         </tr>
       </tbody>
+
       <%# <% end %> 
+  </table>
+    <p style="font-size:0.9em; color:green;">　　※スコアが無い場合(棄権)は「０」を入力してください。</p>
     <div class="col-2 m-2">
       <%= f.submit "スコア取り込み" ,class:"btn btn-outline-primary btn-block" %>
     </div>
-  </table>
 <% end %>  
 
 
