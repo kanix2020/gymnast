@@ -1,5 +1,4 @@
 class Athlete < ApplicationRecord
-
   with_options presence: true do
     validates :name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は全角で入力してください' }
     validates :name, uniqueness: true
@@ -16,5 +15,4 @@ class Athlete < ApplicationRecord
     validates :affiliation_id
     validates :prefecture_id
   end
-
 end

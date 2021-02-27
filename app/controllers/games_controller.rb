@@ -20,5 +20,4 @@ class GamesController < ApplicationController
   def game_params
     params.require(:game).permit(:name, :event_day, :prefecture_id, :venue)
   end
-
 end

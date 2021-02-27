@@ -10,11 +10,9 @@
    <p>大会結果</p>
 </div>
   <div class="games">
-    <%# <div class="game p-3"> %>
-      <%# <div class="game-name"> %>
     <aside class="game p-3">
       <nav class="game-name">
-        <% @games.zip(@scores_csv) do |game,score| %>
+        <% @games.zip(@scores) do |game,score| %>
           <% unless score == nil %>
             <ul>
               <li>
@@ -27,7 +25,4 @@
       </nav>
     </aside>
   </div>
-  
-      <%# </div>
-    </div> %>
   

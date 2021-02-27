@@ -22,7 +22,6 @@
     <% end %>
   </div>
   
-     <%# <button type="button" id="scorebtn" class="btn btn-primary w-10 mt-2 justify-contents-right">計算</button> %>
   <table class="table table-bordered m-4">
     <thead>
       <tr>
@@ -34,7 +33,6 @@
         <th scope="col" colspan="2">HB</th>
       </tr>
     </thead>
-      <%# <% @athlete.each do |athlete| %>
       <tbody>
         <tr>
           <td><%= f.text_field :floor_d, class:"form-control score-group input-score-d", placeholder:"D" %></td>
@@ -67,7 +65,6 @@
           <td><%= f.text_field :horizontal_nd, class:"form-control score-group input-score-nd", placeholder:"ND" %></td>
         </tr>
       </tbody>
-      <%# <% end %> 
   </table>
   <% if user_signed_in? %>
     <p style="font-size:0.9em; color:green;">　　※スコアが無い場合(棄権)は「０」を入力してください。</p>

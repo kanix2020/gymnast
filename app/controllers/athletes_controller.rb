@@ -1,7 +1,7 @@
 class AthletesController < ApplicationController
   def index
   end
-  
+
   def new
     @athlete = Athlete.new
   end
@@ -20,5 +20,4 @@ class AthletesController < ApplicationController
   def athlete_params
     params.require(:athlete).permit(:name, :birthday, :prefecture_id, :affiliation_id)
   end
-
 end

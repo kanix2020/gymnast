@@ -5,7 +5,7 @@ class Affiliation < ActiveHash::Base
     { id: 3, name: '熊本学園大附属高校' },
     { id: 4, name: '東海大学附属星翔高校' },
     { id: 5, name: 'DoChallengeClub' },
-    { id: 6, name: 'YMCA' },
+    { id: 6, name: 'YMCA' }
   ]
 
   include ActiveHash::Associations

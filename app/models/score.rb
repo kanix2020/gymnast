@@ -1,5 +1,4 @@
 class Score < ApplicationRecord
-
   with_options presence: true do
     with_options numericality: { with: /\A[0-9]+\z/, message: 'は半角数字で入力してください' } do
       validates :floor_d
@@ -25,8 +24,7 @@ class Score < ApplicationRecord
     validates :athlete_id
   end
   validates :athlete_id, uniqueness: { scope: :game }
-  
-  
+
   belongs_to :game
   belongs_to :athlete
 end
