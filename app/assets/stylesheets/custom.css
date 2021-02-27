@@ -1,8 +1,33 @@
 
+#error_explanation{
+  display: flex;
+  justify-content: center;
+}
+
+#error_explanation > h2{
+  display: flex;
+  justify-content: center;
+}
+
+#error_explanation h2 ul li{
+  text-align: center;
+}
+
 .wrapper {
   display: flex;
   width:100%;
 }
+
+.sp-menu{
+  margin-left: auto;
+}
+
+.sp-menu #open {
+  font-size:32px;
+  line-height:42px;
+  cursor:pointer;
+}
+
 .side-bar {
   background-color: #253141;
   width: 240px;
@@ -11,7 +36,7 @@
 
 .side-bar-header {
   height: 100px;
-  padding: 0 20px;
+  padding: 30px;
   background-color: #2F3E51;
   /* display: flex; */
   justify-content: space-between;
@@ -40,9 +65,8 @@ margin:auto
 }
 
 .games-top{
-  height:100px;
-  width:100%;
-  padding:30px;
+  height: 64px;
+  padding:12px;
   background-color: #343a40;
 }
 
@@ -59,6 +83,7 @@ margin:auto
 .games {
   /* height: calc(100vh - 100px); */
   overflow: scroll;
+  margin-top: 20px;
 }
 
 .game-name a {
@@ -73,11 +98,8 @@ margin:auto
 
 .chat-header {
   background-color: whitesmoke;
-  height: 100px;
-  width:100%;
-  padding: 0 40px;
-  justify-content: space-between;
-  display: flex;
+  height: 127px;
+  width:103%;
 }
 
 .header-title {
@@ -158,3 +180,52 @@ thead button{
   background-color: rgb(241, 241, 241);
 }
 
+
+/* #貰い物 */
+/* table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+}
+
+th,
+td {
+  vertical-align: top;
+  border: 1px solid #000;
+  padding: 0;
+}
+th {
+  padding: 10px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "d-score total"
+    "e-score total";
+  border: 3px solid yellow;
+}
+
+.grid-item {
+  padding: 10px;
+}
+
+.total {
+  grid-area: total;
+  border-left: 1px solid #000;
+}
+
+.d-score {
+  grid-area: d-score;
+}
+
+.e-score {
+  grid-area: e-score;
+  border-top: 1px solid #000;
+}
+
+.output-score-total {
+  display: block;
+} */

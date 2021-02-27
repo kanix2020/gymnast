@@ -5,6 +5,7 @@ class ScoresController < ApplicationController
     @games = Game.all 
     @scores = Score.all
     @athletes = Athlete.all
+    @scores_csv = Score.all
   end
   
   def new
@@ -12,14 +13,15 @@ class ScoresController < ApplicationController
   end
   
   def create
+    @scores = Score.all
     @athletes = Athlete.all
     @games = Game.all
-    @scores = Score.all
+    @scores_csv = Score.all
     @score = Score.new(score_params)
     if @score.save
-      redirect_to root_path
+      redirect_to scores_path
     else
-      render :index
+      redirect_to scores_path
     end
   end
 
@@ -31,7 +33,7 @@ class ScoresController < ApplicationController
     respond_to do |format|
       format.html
       format.csv do |csv|
-        send_scores_csv(@scores)
+        send_scores_csv(@scores_csv)
       end
     end
     #csv記述
@@ -40,15 +42,16 @@ class ScoresController < ApplicationController
   private
 
   def score_params
-    # params.require(:score).permit(:game_id, :athlete_id, :floor_d, :pommel_d, :rings_d, :vault_d, :parallel_d, :horizontal_d, :floor_e, :pommel_e, :rings_e, :vault_e,:parallel_e, :horizontal_e, :floor_nd, :pommel_nd, :rings_nd, :vault_nd, :parallel_nd, :horizontal_nd)
     params.permit(:game_id, :athlete_id, :floor_d, :pommel_d, :rings_d, :vault_d, :parallel_d, :horizontal_d, :floor_e, :pommel_e, :rings_e, :vault_e,:parallel_e, :horizontal_e, :floor_nd, :pommel_nd, :rings_nd, :vault_nd, :parallel_nd, :horizontal_nd)
+
+    # params.require(:score).permit(:game_id, :athlete_id, :floor_d, :pommel_d, :rings_d, :vault_d, :parallel_d, :horizontal_d, :floor_e, :pommel_e, :rings_e, :vault_e,:parallel_e, :horizontal_e, :floor_nd, :pommel_nd, :rings_nd, :vault_nd, :parallel_nd, :horizontal_nd)
   end
 
-  def send_scores_csv(scores)
+  def send_scores_csv(scores_csv)
     csv_data = CSV.generate(row_sep: "\r\n", encoding:Encoding::CP932)  do |csv|
       header = %w(name － FX PH Ri Vo PB HB Total)
       csv << header
-      scores.each do |score|
+      scores_csv.each do |score|
         values_d = [score.athlete.name,"D", score.floor_d, score.pommel_d, score.rings_d, score.vault_d, score.parallel_d, score.horizontal_d]
         values_e = ["", "E", score.floor_e, score.pommel_e, score.rings_e, score.vault_e,score.parallel_e, score.horizontal_e]
         values_nd = ["", "ND", score.floor_nd, score.pommel_nd, score.rings_nd, score.vault_nd, score.parallel_nd, score.horizontal_nd]

@@ -1,36 +1,33 @@
-<%# <ハンバーガー> %>
-<%# <nav id="nav"> %>
-<%# </nav>
-  <ul>
-    <li><a href="#">SUMPLE1</a></li>
-    <li><a href="#">SUMPLE2</a></li>
-    <li><a href="#">SUMPLE3</a></li>
-  </ul> %>
-
-<%# <div id="hamburger"> %>
-　<!-- 1番上の線 -->
-  <%# <span class="inner_line" id="line1"></span> %>
-　<!-- 真ん中の線 -->
-  <%# <span class="inner_line" id="line2"></span> %>
-　<!-- 1番下の線 -->
-  <%# <span class="inner_line" id="line3"></span> %>
-<%# </div> %>
-<%# ハンバーガー %>
-
-<div class="games-top">
+<div class="ml-1 d-flex justify-content-around" >
+  <% if user_signed_in? %>
+    <p class="mt-3" style="font-size:0.9em; color:white;"><%= "#{current_user.nickname}" %></p>
+    <p class="mt-3" style="font-size:0.9em;"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></p>
+  <% else %>
+    <p class="mt-3" style="font-size:0.9em; color:white;">Guest</p>
+  <% end %>
+</div>
+<div class="games-top mt-2">
    <p>大会結果</p>
 </div>
   <div class="games">
-    <div class="game p-3">
-      <div class="game-name">
-        <%# <% @games.each do |game| %> 
-        <% @games.zip(@scores) do |game,score| %>
+    <%# <div class="game p-3"> %>
+      <%# <div class="game-name"> %>
+    <aside class="game p-3">
+      <nav class="game-name">
+        <% @games.zip(@scores_csv) do |game,score| %>
           <% unless score == nil %>
-            <%=link_to game.name, score_path(game), class:"btn btn-primary btn-block mb-1" %>
-            <%= link_to "CSV出力", score_path(game, format: :csv), class: "btn btn-outline-info mb-2" %>
+            <ul>
+              <li>
+                <%=link_to game.name, score_path(game), class:"btn btn-primary btn-block mb-1" %>
+                <%= link_to "CSV出力", score_path(game, format: :csv), class: "btn btn-outline-info mb-2" %>
+              </li>
+            </ul>
           <% end %>
         <% end %>
-      </div>
-    </div>
+      </nav>
+    </aside>
   </div>
+  
+      <%# </div>
+    </div> %>
   

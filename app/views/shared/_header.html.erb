@@ -1,13 +1,13 @@
-<div class="chat-header mt-2 ml-2">
-  <div class="left-header pt-2">
+<div class="chat-header">
+  <div class="left-header pt-5 pl-4">
     <div class="d-flex">
-      <div class="ms-4 mt-4">
-        <button type="button" class="btn btn-outline-success">
-          <%= link_to "大会データ登録", new_game_path %>
-        </button>
-        <button type="button" class="mr-2 btn btn-outline-success">
-          <%= link_to "選手データ登録", new_athlete_path %>
-        </button>
+      <div>
+        <% if user_signed_in? %>
+            <%= link_to "大会データ登録", new_game_path, class: "btn btn-secondary" %>
+            <%= link_to "選手データ登録", new_athlete_path, class: "ml-4 btn btn-secondary" %>
+        <% else %>
+            <%= link_to "トップページ", root_path, class:"btn btn-success"%>
+        <% end %>
       </div>
     </div>
   </div>

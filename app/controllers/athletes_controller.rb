@@ -9,7 +9,7 @@ class AthletesController < ApplicationController
   def create
     @athlete = Athlete.new(athlete_params)
     if @athlete.save
-      redirect_to root_path
+      redirect_to scores_path
     else
       render :new
     end

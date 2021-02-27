@@ -1,0 +1,25 @@
+<div class="wrapper">
+     <div class="container">
+          <div class ="d-flex justify-content-center">
+               <div class ="d-block mt-3">
+                    <h1>Welcome <br>　　　Gymnast</h1>
+                    <ul class="justify-content-center">
+                         <% if user_signed_in? %>
+                              <p class="mt-3 text-center"><%= "#{current_user.nickname}でログイン中" %></p>
+                         <div class="d-flex justify-content-around mt-3">
+                              <li><%= link_to 'ログアウト', destroy_user_session_path, class:"btn btn-outline-success", method: :delete %></li>
+                              <li><%= link_to 'スコア入力', scores_path, class:"btn btn-outline-success" %></li>
+                         </div>
+                         <% else %>
+                         <div class ="d-flex justify-content-around mt-3">
+                              <li><%= link_to 'ログイン', new_user_session_path, class:"btn btn-outline-info" %></li>
+                              <li><%= link_to 'ゲスト', scores_path, class:"btn btn-outline-success" %></li>
+                              <li><%= link_to '新規登録', new_user_registration_path, class:"btn btn-outline-primary" %></li>
+                         </div>
+                         <% end %>
+                    </ul>
+               </div>
+          </div>
+     </div>
+</div>
+
