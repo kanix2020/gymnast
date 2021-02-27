@@ -2,22 +2,28 @@
 
 ## scores テーブル
 
-| Column             | Type      | Options           |
-| ------------------ | --------- | ----------------- |
-| floor_score_d      | integer   | null: false       |
-| floor_score_e      | integer   | null: false       |
-| pommel_score_d     | integer   | null: false       |
-| pommel_score_e     | integer   | null: false       |
-| rings_score_d      | integer   | null: false       |
-| rings_score_e      | integer   | null: false       |
-| vault_score_d      | integer   | null: false       |
-| vault_score_e      | integer   | null: false       |
-| parallel_score_d   | integer   | null: false       |
-| parallel_score_e   | integer   | null: false       |
-| horizontal_score_d | integer   | null: false       |
-| horizontal_score_e | integer   | null: false       |
-| memo               | string                        |
-| athlete            | reference | foreign_key: true |
+| Column              | Type      | Options           |
+| ------------------- | --------- | ----------------- |
+| floor_score_d       | float     | null: false       |
+| floor_score_e       | float     | null: false       |
+| floor_score_nd      | float     | null: false       |
+| pommel_score_d      | float     | null: false       |
+| pommel_score_e      | float     | null: false       |
+| pommel_score_nd     | float     | null: false       |
+| rings_score_d       | float     | null: false       |
+| rings_score_e       | float     | null: false       |
+| rings_score_nd      | float     | null: false       |
+| vault_score_d       | float     | null: false       |
+| vault_score_e       | float     | null: false       |
+| vault_score_nd      | float     | null: false       |
+| parallel_score_d    | float     | null: false       |
+| parallel_score_e    | float     | null: false       |
+| parallel_score_nd   | float     | null: false       |
+| horizontal_score_d  | float     | null: false       |
+| horizontal_score_e  | float     | null: false       |
+| horizontal_score_nd | float     | null: false       |
+| athlete             | reference                     |
+| game                | reference | foreign_key: true |
 
 ### Association
 - belongs_to :game

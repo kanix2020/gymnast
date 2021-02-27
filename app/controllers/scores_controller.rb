@@ -22,12 +22,13 @@ class ScoresController < ApplicationController
       redirect_to scores_path
     else
       redirect_to scores_path
+      # render :index
     end
   end
 
   def show
     @game = Game.find(params[:id])
-    @scores = @game.scores.order(:id)
+    @scores_csv = @game.scores.order(:id)
 
     #csv記述
     respond_to do |format|
