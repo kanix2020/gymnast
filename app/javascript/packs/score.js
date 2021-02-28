@@ -31,7 +31,7 @@
 //       const scorebtn = document.getElementById("scorebtn");
 //       // 各列のD-score入力、E-score入力、Total出力の要素をグループ化して取得する
 //      // window.addEventListener('load', () => {
-//       const scoreGroups = document.getElementsByClassName(".score-group");
+//       const scoreGroups = document.getElementsByClassName("score-group");
 //       // #scorebtnがクリックされたら処理を開始
 //       scorebtn.addEventListener("click", () => {
 //         // グループを一つずつ処理

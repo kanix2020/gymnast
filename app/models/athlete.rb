@@ -1,7 +1,8 @@
 class Athlete < ApplicationRecord
+  validates :name, uniqueness: { case_sensitive: true }
+  
   with_options presence: true do
     validates :name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は全角で入力してください' }
-    validates :name, uniqueness: true
     validates :birthday
   end
 
