@@ -34,8 +34,20 @@
 - VScode
 
 # 実装した機能
+- ログイン機能（SNS認証）
 ![SNS認証](https://user-images.githubusercontent.com/77039946/109589987-8d1bb180-7b4e-11eb-9617-cee387e762bd.gif)
 
+- スコア集計機能
+![スコア取り込み](https://user-images.githubusercontent.com/77039946/109595533-0d92e000-7b58-11eb-9a11-f240aaf5c2c3.gif)
+
+- 大会登録機能
+![サイドバーに大会表示](https://user-images.githubusercontent.com/77039946/109597182-120cc800-7b5b-11eb-92e9-d88c4e3f91d3.gif)
+
+- 選手登録機能
+![選手登録](https://user-images.githubusercontent.com/77039946/109598079-e3432180-7b5b-11eb-9a8e-5f6790754eee.gif)
+
+- 集計結果CSV出力機能
+![集計結果CSV化](https://user-images.githubusercontent.com/77039946/109598558-cfe48600-7b5c-11eb-9d8f-bb68305ea7f4.gif)
 # URL
 - http://54.95.203.169/
 
