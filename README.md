@@ -34,8 +34,7 @@
 - VScode
 
 # 実装した機能
- https://user-images.githubusercontent.com/77039946/109586145-0ebc1100-7b48-11eb-8329-6daef1670fa2.mp4
-GIFと説明	実装した機能について、それぞれどのような特徴があるのか列挙しましょう。GIFを添えることで、イメージがしやすくなります。
+![demo](https://user-images.githubusercontent.com/77039946/109586735-25af3300-7b49-11eb-8d42-7deb684fffb3.mp4/raw)
 
 # URL
 - http://54.95.203.169/
