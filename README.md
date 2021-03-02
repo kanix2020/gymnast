@@ -82,7 +82,7 @@
 - EC2上でSNS認証機能を使用できる様にする。
 
 # データベース設計	
- ![ER図](https://user-images.githubusercontent.com/77039946/109584709-6ad16600-7b45-11eb-826c-c7bf705c9a22.png)
+ ![ER図](https://user-images.githubusercontent.com/77039946/109584984-f6e38d80-7b45-11eb-8afb-da021920841e.png)
 
 # ローカルでの動作方法	
 - git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記述しましょう。この時、アプリケーション開発に使用した環境を併記することを忘れないでください（パッケージやRubyのバージョンなど）。
