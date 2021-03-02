@@ -34,7 +34,7 @@
 - VScode
 
 # 実装した機能
-![demo](https://user-images.githubusercontent.com/77039946/109589773-33b38280-7b4e-11eb-9ec1-c15a04e0d94e.gif)
+![SNS認証](https://user-images.githubusercontent.com/77039946/109589987-8d1bb180-7b4e-11eb-9617-cee387e762bd.gif)
 
 # URL
 - http://54.95.203.169/
@@ -90,7 +90,9 @@
 - EC2上でSNS認証機能を使用できる様にする。
 
 # データベース設計	
- ![ER図](https://user-images.githubusercontent.com/77039946/109584984-f6e38d80-7b45-11eb-8afb-da021920841e.png)
+![ER図](https://user-images.githubusercontent.com/77039946/109584984-f6e38d80-7b45-11eb-8afb-da021920841e.png)
+
+
 
 # ローカルでの動作方法	
 -GitGit
