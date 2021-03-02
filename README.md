@@ -34,7 +34,7 @@
 - VScode
 
 # 実装した機能
- ![大会データ登録](https://user-images.githubusercontent.com/77039946/109586145-0ebc1100-7b48-11eb-8329-6daef1670fa2.mp4)
+ https://user-images.githubusercontent.com/77039946/109586145-0ebc1100-7b48-11eb-8329-6daef1670fa2.mp4
 GIFと説明	実装した機能について、それぞれどのような特徴があるのか列挙しましょう。GIFを添えることで、イメージがしやすくなります。
 
 # URL
