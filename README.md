@@ -5,34 +5,6 @@
 # アプリケーション概要	
 - 体操競技における採点結果集計アプリ。
 
-# 使用技術
-### バックエンド
-- Ruby(ver 2.6.5)
-- Ruby on rails(ver 6.0.3.5)
-### フロントエンド
-- HTML 
-- CSS 
-- BootStrap(ver 4.1.1) 
-- JavaScript
-### データベース
-- MySQL(ver 5.6) 
-- SeaquelPro
-### 外部API
-- GoogleCloudPlatform
-### インフラ
-- AWS(EC2) 
-- Capistrano
-### Webサーバー(本番環境) 
-- nginx
-### アプリケーションサーバー(本番環境) 
-- unicorn(ver 5.4.1)
-### ソース管理
-- GitHub
-- GitHubDesktop
-### テスト
-- RSpec
-### エディタ
-- VScode
 
 # 実装した機能
 基本機能として、以下の５つの機能を実装しました。
@@ -81,6 +53,35 @@
 - 二重作業（試合終了後、紙で記載していた内容をExcel等に再度データ入力）
 
 以上の煩雑な手順を簡略化し課題解決を目指しました。
+
+# 使用技術
+### バックエンド
+- Ruby(ver 2.6.5)
+- Ruby on rails(ver 6.0.3.5)
+### フロントエンド
+- HTML 
+- CSS 
+- BootStrap(ver 4.1.1) 
+- JavaScript
+### データベース
+- MySQL(ver 5.6) 
+- SeaquelPro
+### 外部API
+- GoogleCloudPlatform
+### インフラ
+- AWS(EC2) 
+- Capistrano
+### Webサーバー(本番環境) 
+- nginx
+### アプリケーションサーバー(本番環境) 
+- unicorn(ver 5.4.1)
+### ソース管理
+- GitHub
+- GitHubDesktop
+### テスト
+- RSpec
+### エディタ
+- VScode
 
 # 要件	
 ## 情報入力機能
