@@ -21,51 +21,159 @@
       <% end %>
     <% end %>
   </div>
-  
-  <table class="table table-bordered m-4">
-    <thead>
-      <tr>
-        <th scope="col" colspan="2">FX</th>
-        <th scope="col" colspan="2">PH</th>
-        <th scope="col" colspan="2">Ri</th>
-        <th scope="col" colspan="2">Vo</th>
-        <th scope="col" colspan="2">PB</th>
-        <th scope="col" colspan="2">HB</th>
-      </tr>
-    </thead>
-      <tbody>
-        <tr>
-          <td><%= f.text_field :floor_d, class:"form-control score-group input-score-d", placeholder:"D" %></td>
-          <td rowspan="3" class="score-group output-score-total">Total</td>
-          <td><%= f.text_field :pommel_d, class:"form-control score-group input-score-d", placeholder:"D" %></td>
-          <td rowspan="3" class="score-group output-score-total">Total</td>
-          <td><%= f.text_field :rings_d, class:"form-control score-group input-score-d", placeholder:"D" %></td>
-          <td rowspan="3" class="score-group output-score-total">Total</td>
-          <td><%= f.text_field :vault_d, class:"form-control score-group input-score-d", placeholder:"D" %></td>
-          <td rowspan="3" class="score-group output-score-total">Total</td>
-          <td><%= f.text_field :parallel_d, class:"form-control score-group input-score-d", placeholder:"D" %></td>
-          <td rowspan="3" class="score-group output-score-total">Total</td>
-          <td><%= f.text_field :horizontal_d, class:"form-control score-group input-score-d", placeholder:"D" %></td>
-          <td rowspan="3" class="score-group output-score-total">Total</td>
-        </tr>
-        <tr>
-          <td><%= f.text_field :floor_e, class:"form-control score-group input-score-e", placeholder:"E" %></td>
-          <td><%= f.text_field :pommel_e, class:"form-control score-group input-score-e", placeholder:"E" %></td>
-          <td><%= f.text_field :rings_e, class:"form-control score-group input-score-e", placeholder:"E" %></td>
-          <td><%= f.text_field :vault_e, class:"form-control score-group input-score-e", placeholder:"E" %></td>
-          <td><%= f.text_field :parallel_e, class:"form-control score-group input-score-e", placeholder:"E" %></td>
-          <td><%= f.text_field :horizontal_e, class:"form-control score-group input-score-e", placeholder:"E" %></td>
-        </tr>
-        <tr>
-          <td><%= f.text_field :floor_nd, class:"form-control score-group input-score-nd", placeholder:"ND" %></td>
-          <td><%= f.text_field :pommel_nd, class:"form-control score-group input-score-nd", placeholder:"ND" %></td>
-          <td><%= f.text_field :rings_nd, class:"form-control score-group input-score-nd", placeholder:"ND" %></td>
-          <td><%= f.text_field :vault_nd, class:"form-control score-group input-score-nd", placeholder:"ND" %></td>
-          <td><%= f.text_field :parallel_nd, class:"form-control score-group input-score-nd", placeholder:"ND" %></td>
-          <td><%= f.text_field :horizontal_nd, class:"form-control score-group input-score-nd", placeholder:"ND" %></td>
-        </tr>
-      </tbody>
-  </table>
+
+  <div class="d-flex mt-5 ml-5"> 
+    <%# 床 %>
+    <div class="fx-score score-box"> 
+      <div class="d-flex">
+        <div class="event-box bg-primary">
+        fx
+        </div>
+      </div>
+      <div class="d-flex score-dend">
+        <div class="dend-box">
+          <div class="bg-secondary">
+            <%= f.text_field :floor_d, class:"d-score input-box", placeholder:"D" %>
+          </div>
+          <div class="bg-secondary">
+            <%= f.text_field :floor_e, class:"e-score input-box", placeholder:"E" %>
+          </div>
+          <div class="bg-secondary">
+            <%= f.text_field :floor_nd, class:"nd input-box", placeholder:"ND" %>
+          </div>
+        </div>
+        <div class="total-box d-flex bg-info text-center">
+          total
+        </div>
+      </div>
+    </div>
+    <%# 床 %>
+    <%# 鞍馬 %>
+    <div class="fx-score score-box"> 
+      <div class="d-flex">
+        <div class="event-box bg-primary">
+        Ph
+        </div>
+      </div>
+      <div class="d-flex score-dend">
+        <div class="dend-box">
+          <div class="bg-secondary">
+            <%= f.text_field :pommel_d, class:"d-score input-box", placeholder:"D" %>
+          </div>
+          <div class="bg-secondary">
+            <%= f.text_field :pommel_e, class:"e-score input-box", placeholder:"E" %>
+          </div>
+          <div class="bg-secondary">
+            <%= f.text_field :pommel_nd, class:"nd input-box", placeholder:"ND" %>
+          </div>
+        </div>
+        <div class="total-box d-flex bg-info text-center">
+          total
+        </div>
+      </div>
+    </div>
+    <%# 鞍馬 %>
+    <%# 吊輪 %>
+    <div class="fx-score score-box"> 
+      <div class="d-flex">
+        <div class="event-box bg-primary">
+        Ri
+        </div>
+      </div>
+      <div class="d-flex score-dend">
+        <div class="dend-box">
+          <div class="bg-secondary">
+            <%= f.text_field :rings_d, class:"d-score input-box", placeholder:"D" %>
+          </div>
+          <div class="bg-secondary">
+            <%= f.text_field :rings_e, class:"e-score input-box", placeholder:"E" %>
+          </div>
+          <div class="bg-secondary">
+            <%= f.text_field :rings_nd, class:"nd input-box", placeholder:"ND" %>
+          </div>
+        </div>
+        <div class="total-box d-flex bg-info text-center">
+          total
+        </div>
+      </div>
+    </div>
+    <%# 吊輪 %>
+    <%# 跳馬 %>
+    <div class="ph-score score-box"> 
+      <div class="d-flex">
+        <div class="event-box bg-primary">
+        Pb
+        </div>
+      </div>
+      <div class="d-flex score-dend">
+        <div class="dend-box">
+          <div class="d-score bg-secondary">
+            <%= f.text_field :vault_d, class:"input-box", placeholder:"D" %>
+          </div>
+          <div class="e-score bg-secondary">
+            <%= f.text_field :vault_e, class:"input-box", placeholder:"E" %>
+          </div>
+          <div class="nd-score bg-secondary">
+            <%= f.text_field :vault_nd, class:"input-box", placeholder:"ND" %>
+          </div>
+        </div>
+        <div class="total-box d-flex bg-info text-center">
+          total
+        </div>
+      </div>
+    </div>
+    <%# 跳馬 %>
+    <%# 平行棒 %>
+    <div class="ph-score score-box"> 
+      <div class="d-flex">
+        <div class="event-box bg-primary">
+        Pb
+        </div>
+      </div>
+      <div class="d-flex score-dend">
+        <div class="dend-box">
+          <div class="d-score bg-secondary">
+            <%= f.text_field :parallel_d, class:"input-box", placeholder:"D" %>
+          </div>
+          <div class="e-score bg-secondary">
+            <%= f.text_field :parallel_e, class:"input-box", placeholder:"E" %>
+          </div>
+          <div class="nd-score bg-secondary">
+            <%= f.text_field :parallel_nd, class:"input-box", placeholder:"ND" %>
+          </div>
+        </div>
+        <div class="total-box d-flex bg-info text-center">
+          total
+        </div>
+      </div>
+    </div>
+    <%# 平行棒 %>
+    <%# 鉄棒 %>
+    <div class="ph-score score-box"> 
+      <div class="d-flex">
+        <div class="event-box bg-primary">
+        Hb
+        </div>
+      </div>
+      <div class="d-flex score-dend">
+        <div class="dend-box">
+          <div class="d-score bg-secondary">
+            <%= f.text_field :horizontal_d, class:"input-box", placeholder:"D" %>
+          </div>
+          <div class="e-score bg-secondary">
+            <%= f.text_field :horizontal_e, class:"input-box", placeholder:"E" %>
+          </div>
+          <div class="nd-score bg-secondary">
+            <%= f.text_field :horizontal_nd, class:"input-box", placeholder:"ND" %>
+          </div>
+        </div>
+        <div class="total-box d-flex bg-info text-center">
+          total
+        </div>
+      </div>
+    </div>
+    <%# 跳馬 %>
+  </div>
   <% if user_signed_in? %>
     <p style="font-size:0.9em; color:green;">　　※スコアが無い場合(棄権)は「０」を入力してください。</p>
     <div class="col-2 m-2">

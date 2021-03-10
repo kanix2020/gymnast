@@ -180,6 +180,30 @@ thead button{
   background-color: rgb(241, 241, 241);
 }
 
+.score-box{
+  width:16%;
+  text-align: center;
+}
+
+.event-box{
+  width:100%;
+  background-color: rgb(66, 201, 235);
+}
+
+.dend-box{
+  width: 100%;
+}
+
+.input-box{
+  width:100%;
+}
+
+.total-box{
+  width:100%;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* #貰い物 */
 /* table {
