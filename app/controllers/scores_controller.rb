@@ -22,7 +22,6 @@ class ScoresController < ApplicationController
       redirect_to scores_path
       # render :index
     end
-    binding.pry
   end
 
   def show

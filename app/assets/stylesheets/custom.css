@@ -182,12 +182,14 @@ thead button{
 
 .score-box{
   width:16%;
+  height: fit-content;
   text-align: center;
+  background-color: lightgoldenrodyellow;
+  border-radius: 4px
 }
 
 .event-box{
   width:100%;
-  background-color: rgb(66, 201, 235);
 }
 
 .dend-box{
@@ -202,6 +204,7 @@ thead button{
   width:100%;
   align-items: center;
   justify-content: center;
+  background-color: honeydew;
 }
 
 
