@@ -1,5 +1,6 @@
 　　　　　　　　　　　　![olympic07_gymnastics](https://user-images.githubusercontent.com/77039946/109603660-75035c80-7b65-11eb-89fa-0bdeac5b83a6.png)`
-## 更新2021/3/10 スコア入力欄更新            
+## 更新
+- 2021/3/10 スコア入力欄更新            
 
 # アプリケーション名	
 - Gymnast
