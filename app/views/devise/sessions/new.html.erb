@@ -30,11 +30,11 @@
           </div>           
         <% end %>
         <%# SNS認証機能 %>
-        <%# <div class="d-flex justify-content-center mt-2"> %>
-          <%# <%= link_to user_google_oauth2_omniauth_authorize_path, class:"w-25 btn btn-light", method: :post do %>
-            <%# <%= image_tag "/assets/btn_google_signin_light_focus_web.png" %>
-          <%# <% end %>
-        <%# </div>  %>
+        <div class="d-flex justify-content-center mt-2">
+          <%= link_to user_google_oauth2_omniauth_authorize_path, class:"w-25 btn btn-light", method: :post do %>
+          <%= image_tag "/assets/btn_google_signin_light_focus_web.png" %>
+          <% end %>
+        </div> 
         <%# SNS認証機能 %>         
       </div>
     </div>
