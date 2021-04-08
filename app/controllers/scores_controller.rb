@@ -19,9 +19,10 @@ class ScoresController < ApplicationController
     if @score.save
       redirect_to scores_path
     else
-      redirect_to scores_path
-      # render :index
+      # redirect_to scores_path
+      render :index
     end
+    # binding.pry
   end
 
   def show
