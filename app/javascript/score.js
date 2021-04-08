@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', function(){
         var escore = parent.find(".e-score").val();
         var ndscore = parent.find(".nd").val();
         var score = parseFloat(dscore) + parseFloat(escore) - parseFloat(ndscore);
-        total.text(score);
+        total.text((Math.floor(score * 100)) / 100);
       }
       console.log($(".d-score").val())
       console.log($(".e-score").val())
